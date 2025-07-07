@@ -4,15 +4,16 @@
 typedef long long ll;
 using namespace std;
 int cnt, cnt1, cnt2;
-int a[9000000];
+
 int main()
 {
-    int n, k;
-    cin >> n >> k;
-    incf(i, 1, n)
+    int n, nn, nnn;
+    cin >> n;
+    nn = n % 10;
+    nnn = n / 10;
+    if (nnn > 300)
     {
-        cin >> a[i];
+        cout << 0;
+        return 0;
     }
-    sort(a, a + n + 1);
-    cout << a[k + 1];
 }

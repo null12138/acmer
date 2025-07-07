@@ -4,15 +4,22 @@
 typedef long long ll;
 using namespace std;
 int cnt, cnt1, cnt2;
-int a[9000000];
+int a[110], b[110], c[110] = {0};
 int main()
 {
-    int n, k;
-    cin >> n >> k;
+    int n, ans = 0;
+    cin >> n;
     incf(i, 1, n)
     {
-        cin >> a[i];
+        cin >> a[i] >> b[i];
+        if (b[i] > a[i])
+        {
+            c[i] = 1;
+        }
     }
-    sort(a, a + n + 1);
-    cout << a[k + 1];
+    incf(i, 1, n)
+    {
+        ans += c[i];
+    }
+    cout << ans;
 }

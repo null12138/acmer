@@ -4,15 +4,18 @@
 typedef long long ll;
 using namespace std;
 int cnt, cnt1, cnt2;
-int a[9000000];
+ll z, c = 0;
 int main()
 {
-    int n, k;
-    cin >> n >> k;
+    int n, m;
+    cin >> n >> m;
     incf(i, 1, n)
     {
-        cin >> a[i];
+        incf(j, 1, m)
+        {
+            z += (n - i + 1) * (m - j + 1);
+            c += min(n - i + 1, m - j + 1); // 正方形
+        }
     }
-    sort(a, a + n + 1);
-    cout << a[k + 1];
+    cout << c << " " << z - c;
 }
