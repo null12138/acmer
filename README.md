@@ -1,5 +1,4 @@
-好的，这是移除所有注释后的线性筛代码：
-
+无注释的线性筛
 ```c++
 #include <bits/stdc++.h>
 #define incf(i, a, b) for (int i = (a); i <= (b); i++)
